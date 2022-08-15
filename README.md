@@ -1,6 +1,6 @@
-## ESS Portal
+## Employee Self Service Portal
 
-ESS Portal for HRMS
+Custom ESS
 
 #### License
 

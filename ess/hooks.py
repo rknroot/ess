@@ -1,20 +1,24 @@
 from . import __version__ as app_version
 
 app_name = "ess"
-app_title = "ESS Portal"
-app_publisher = "Eco Data"
-app_description = "ESS Portal for HRMS"
+app_title = "Employee Self Service Portal"
+app_publisher = "fitsterp"
+app_description = "Custom ESS"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
-app_email = "rk@whitehatglobal.org"
+app_email = "support@firsterp.in"
 app_license = "MIT"
+
+
+on_session_creation = ["ess.employee_self_service_portal.page.ess.ess.on_login"]
+extend_bootinfo = "ess.boot.boot_session"
 
 # Includes in <head>
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/ess/css/ess.css"
-# app_include_js = "/assets/ess/js/ess.js"
+app_include_css = "/assets/ess/css/ess-float.min.css"
+app_include_js = ["/assets/ess/js/ess-template.min.js"]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/ess/css/ess.css"
@@ -52,6 +56,15 @@ app_license = "MIT"
 
 # automatically create page for each record of this doctype
 # website_generators = ["Web Page"]
+
+# Jinja
+# ----------
+
+# add methods and filters to jinja environment
+# jinja = {
+# 	"methods": "ess.utils.jinja_methods",
+# 	"filters": "ess.utils.jinja_filters"
+# }
 
 # Installation
 # ------------
@@ -112,10 +125,10 @@ app_license = "MIT"
 # 	],
 # 	"weekly": [
 # 		"ess.tasks.weekly"
-# 	]
+# 	],
 # 	"monthly": [
 # 		"ess.tasks.monthly"
-# 	]
+# 	],
 # }
 
 # Testing
@@ -145,26 +158,26 @@ app_license = "MIT"
 # User Data Protection
 # --------------------
 
-user_data_fields = [
-	{
-		"doctype": "{doctype_1}",
-		"filter_by": "{filter_by}",
-		"redact_fields": ["{field_1}", "{field_2}"],
-		"partial": 1,
-	},
-	{
-		"doctype": "{doctype_2}",
-		"filter_by": "{filter_by}",
-		"partial": 1,
-	},
-	{
-		"doctype": "{doctype_3}",
-		"strict": False,
-	},
-	{
-		"doctype": "{doctype_4}"
-	}
-]
+# user_data_fields = [
+# 	{
+# 		"doctype": "{doctype_1}",
+# 		"filter_by": "{filter_by}",
+# 		"redact_fields": ["{field_1}", "{field_2}"],
+# 		"partial": 1,
+# 	},
+# 	{
+# 		"doctype": "{doctype_2}",
+# 		"filter_by": "{filter_by}",
+# 		"partial": 1,
+# 	},
+# 	{
+# 		"doctype": "{doctype_3}",
+# 		"strict": False,
+# 	},
+# 	{
+# 		"doctype": "{doctype_4}"
+# 	}
+# ]
 
 # Authentication and authorization
 # --------------------------------
